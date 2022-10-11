@@ -23,12 +23,26 @@ public class Ejercicio5 {
 		num3 = key.nextInt();
 
 		// Creamos la condición.
-		if (num1 < num2) {
-
-			// Cerramos el escaner
-			key.close();
+		if (num1 > num2 && num1 > num3) { // En esta condición comprobaremos si num1 es el número más grande, una vez
+											// hecho comprobamos quien de num2 o num3 es más grande e imprimimos según
+											// el orden.
+			System.out.println(num2 > num3 ? "Los número ordenados serán " + num1 + " " + num2 + " " + num3
+					: "Los número ordenados serán " + num1 + " " + num3 + " " + num2);
+		} else if (num3 > num2 && num3 > num1) { // En esta condición comprobaremos si num3 es el número más grande, una
+													// vez
+			// hecho comprobamos quien de num1 o num2 es más grande e imprimimos según
+			// el orden.
+			System.out.println(num2 > num1 ? "Los número ordenados serán " + num3 + " " + num2 + " " + num1
+					: "Los número ordenados serán " + num3 + " " + num1 + " " + num2);
+		} else { // En esta condición comprobaremos si num1 o num2 es más grande e imprimimos
+					// según
+			// el orden, ya que sabemos que num3 es el tercero.
+			System.out.println(num2 < num1 ? "Los número ordenados serán " + num2 + " " + num3 + " " + num1
+					: "Los número ordenados serán " + num2 + " " + num1 + " " + num3);
 
 		}
 
+		// Cerramos el escaner
+		key.close();
 	}
 }
