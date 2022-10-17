@@ -22,16 +22,19 @@ public class Ejercicio8 {
 		num = key.nextInt();
 
 		// Creamos varios if anidados para definir las condiciones de cada nota
-		if (num >= 0 && num < 5) { // Lo que hacemos en cada una de las condiciones es especificar el rango que hay
+		if (num < 0 || num > 10) { // Lo que hacemos en cada una de las condiciones es especificar el rango que hay
 									// de número por cada nota, siempre habrá mínimo un número inclusive.
+			System.out.println("No está en el rango de 1 al 10");
+		} else
+		  if (num < 5) { //Si la nota está dentro del rango del 0 a 4,99 es INSUFICIENTE
 			System.out.println("INSUFICIENTE");
-		} else if (num >= 5 && num < 6) {
+		} else if (num < 6) { //Si la nota está dentro del rango del 5 a 5,99 es SUFICIENTE
 			System.out.println("SUFICIENTE");
-		} else if (num >= 6 && num < 7) {
+		} else if (num < 7) { //Si la nota está dentro del rango del 6 a 6,99 es BIEN
 			System.out.println("BIEN");
-		} else if (num >= 7 && num < 9) {
+		} else if (num < 9) { //Si la nota está dentro del rango del 7 a 8,99 es NOTABLE
 			System.out.println("NOTABLE");
-		} else if (num >= 9 && num <= 10) {
+		} else if (num <= 10) { //Si la nota está dentro del rango del 9 a 9,99 es SOBRESALIENTE
 			System.out.println("SOBRESALIENTE");
 		}
 

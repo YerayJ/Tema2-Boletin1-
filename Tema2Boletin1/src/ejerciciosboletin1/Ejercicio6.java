@@ -32,6 +32,16 @@ public class Ejercicio6 {
 		x2 = (-b - Math.sqrt(raiz)) / 2 * a;
 		x1 = (+b - Math.sqrt(raiz)) / 2 * a;
 
+		// Si a vale cero, se podría resolver como una ecuación de primer grado.
+		if (a == 0) {
+			x1 = b / c; // En esta operación cambiamos el sentido de la fórmula al faltarnos la variable
+						// a. Pasamos b y c al otro lado dividiendo.
+			if ( ) {
+				
+			}
+
+		}
+
 		if (raiz <= 0) { // Si la raíz es menor-igual que el número 0, imprimimos error.
 			System.out.println("ERROR");
 		} else { // Por último imprimimos el resultado de las operaciones.
